@@ -8,6 +8,7 @@ let myName = document.querySelector('.name');
 let myHobby = document.querySelector('.hobby');
 let myLocation = document.querySelector('.location');
 let image = document.querySelector('.image');
+image.src = "dog.png";
 
 
 // CODE ALONG
@@ -23,21 +24,39 @@ let image = document.querySelector('.image');
 
 contentButton.addEventListener('click', function() {
 
-
-
-
+myName.innerHTML = "My name is Demetri";
+myHobby.innerHTML = "I like to hang out with my friends";
+myLocation.innerHTML = "I live in Zionsville";
 
 
 });
 
-// 3. Add an event listener to the `image1Button`
-// 4. When clicked, it should change the source of `image` to another image URL.
+contentButton.addEventListener("mouseout", function() {
+    myName.innerHTML = "My name is...";
+    myHobby.innerHTML = "My hobby is...";
+    myLocation.innerHTML = "I live...";
+})
 
+// 3. Add an event listener to the `image1Button`
+image1Button.addEventListener("mouseover", function() {
+    image.src = "dog2.png";
+});
+// 4. When clicked, it should change the source of `image` to another image URL.
+image1Button.addEventListener("mouseout", function() {
+    image.src = "dog.png";
+});
 
 
 
 
 // 5. Add an event listener to the `image2Button`
+image2Button.addEventListener("click", function() {
+    image.src = "dog2.png";
+});
+
+image2Button.addEventListener("mouseout", function() {
+    image.src = "dog.png";
+});
 // 6. When clicked, it should change the source of `image` to another image URL.
 
 
